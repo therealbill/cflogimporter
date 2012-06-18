@@ -12,7 +12,7 @@ The second script will extract those logs in temporal order and write them out t
 These two scripts are intended ot be run periodically such as through cron.
 
 
-Iniitally written for a single bucket. I need to add more error handling and woudl like to convert it to a configfile based system and support multiple buckets or even accounts. It was done airly quickly and I'd like to clean it up and make it easier to follow.
+Initially written for a single bucket. I need to add more error handling and would like to convert it to a configfile based system and support multiple buckets or even accounts. It was done airly quickly and I'd like to clean it up and make it easier to follow.
 
 
 As soon as I get time. ;)
