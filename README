@@ -1,0 +1,18 @@
+This set of scripts can be used to pull Amazon CloudFront logs down to local files.
+
+
+The first script retrieves them from the S3 bucket you configure it to pull from. 
+Configured CloudFront logging is covered by Amazon here: http://docs.amazonwebservices.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html
+
+When it retrieves the logs it converts them from their initial format to a tab delineated set of fields. It further repalces the first two fields with a human readable timestamp and a unix timestamp respectively. It then adds each entry to a Redis instance. From there the second script takes over.
+
+The second script will extract those logs in temporal order and write them out to a log file in a /var/log/YYY-MM-DD/ directory.
+
+
+These two scripts are intended ot be run periodically such as through cron.
+
+
+Iniitally written for a single bucket. I need to add more error handling and woudl like to convert it to a configfile based system and support multiple buckets or even accounts. It was done airly quickly and I'd like to clean it up and make it easier to follow.
+
+
+As soon as I get time. ;)
